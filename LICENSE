@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This combined work includes material from three MIT-licensed upstream projects.
-Their full license texts are in `licenses/`, and their attribution is in
-`ATTRIBUTION.md`.
-
-This license does not grant any rights in the book "Refactoring UI" by Adam
-Wathan and Steve Schoger, which is a separate copyrighted work.

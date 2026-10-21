@@ -1,0 +1,76 @@
+{
+  "id": "09-copy",
+  "title": "Billing settings — copy that reads like a model wrote it",
+  "workflow": "D",
+  "file": "index.html",
+  "prompt": "对 eval/cases/09-copy/index.html 做设计评审（Workflow D，只诊断、不改文件）。Lumen 发票产品的账单设置页，主色 #0f766e。重点检查文案。有条件请打开页面看渲染。每条 finding 必须挂规则号。",
+  "stack": {
+    "framework": "plain HTML",
+    "tokens": "primary #0f766e"
+  },
+  "pass_bar": "Must flag the 'not just X, it's Y' construction, 'Unlock your potential', 'Seamlessly', the bare 'Invalid input' error, the 'No data' empty state, and the destructive confirmation that names neither object nor consequence.",
+  "must": [
+    {
+      "rules": ["§18.2.3"],
+      "severity": "P1",
+      "severity_floor": "P1",
+      "now": "The lede says 'it's not just invoices, it's freedom'"
+    },
+    {
+      "rules": ["§18.2.7", "§18.2.8"],
+      "severity": "P1",
+      "severity_floor": "P2",
+      "now": "'Seamlessly manage…' is an empty intensifier"
+    },
+    {
+      "rules": ["§18.2.12"],
+      "severity": "P1",
+      "severity_floor": "P1",
+      "now": "The plan CTA reads 'Unlock your potential' and names no action"
+    },
+    {
+      "rules": ["§18.5.2"],
+      "severity": "P1",
+      "severity_floor": "P1",
+      "now": "The email field error is 'Invalid input.' — no cause and no recovery"
+    },
+    {
+      "rules": ["§18.5.3"],
+      "severity": "P1",
+      "severity_floor": "P1",
+      "now": "The payment-methods empty state is the bare string 'No data', with no action"
+    },
+    {
+      "rules": ["§18.5.4"],
+      "severity": "P0",
+      "severity_floor": "P0",
+      "now": "The delete dialog asks 'Are you sure?' and the confirm button says 'Yes'; neither names the workspace or the consequence"
+    }
+  ],
+  "should": [
+    {
+      "rules": ["§18.2.6"],
+      "severity": "P2",
+      "now": "'Fast, secure, and reliable invoicing' is a tricolon"
+    },
+    {
+      "rules": ["§18.2.4"],
+      "severity": "P2",
+      "now": "'Whether you're a freelancer or an enterprise' addresses two contrived audiences"
+    }
+  ],
+  "forbidden": [
+    {
+      "rules": ["§3.6", "§3.6.a"],
+      "why": "The form grouping is correct: label to input is 4px, group to group is 24px."
+    },
+    {
+      "rules": ["§4.1", "§4.1.1d"],
+      "why": "The type scale is consistent; this fixture isolates copy."
+    },
+    {
+      "rules": ["§19.3"],
+      "why": "Teal is the brand. Reporting it as a missing indigo palette is a false positive."
+    }
+  ]
+}

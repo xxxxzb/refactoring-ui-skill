@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumen — Billing settings</title>
+  <!--
+    Gold fixture 09-copy
+    Product: Lumen Invoicing. Primary #0f766e.
+    The visual system is deliberately sound. Every load-bearing bug is copy (§18).
+  -->
+  <style>
+    :root { --primary: #0f766e; --text: #111827; --muted: #6b7280; --line: #d1d5db; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: #f9fafb;
+      color: var(--text);
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 48px 24px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .lede { margin: 0 0 32px; max-width: 62ch; color: var(--muted); font-size: 16px; line-height: 1.6; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 24px; margin-bottom: 24px; }
+    .card h2 { margin: 0 0 4px; font-size: 16px; }
+    .card p { margin: 0 0 16px; max-width: 62ch; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    label { display: block; margin-bottom: 4px; font-size: 14px; font-weight: 500; }
+    input { width: 100%; padding: 8px 12px; font-size: 14px; border: 1px solid var(--line); border-radius: 6px; }
+    .error { margin-top: 4px; color: #b91c1c; font-size: 13px; }
+    button { font: inherit; cursor: pointer; }
+    .primary { background: var(--primary); color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 600; }
+    .danger-solid { background: #b91c1c; color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 600; }
+    .ghost { background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px; }
+    .danger { border-color: #fecaca; }
+    .danger h2 { color: #b91c1c; }
+    .empty { border: 1px dashed var(--line); border-radius: 6px; padding: 32px; text-align: center; color: var(--muted); }
+    .confirm { margin-top: 16px; padding: 16px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; }
+    .confirm h3 { margin: 0 0 8px; font-size: 16px; }
+    .confirm p { margin: 0 0 16px; color: #7f1d1d; font-size: 14px; }
+    .confirm-actions { display: flex; justify-content: flex-end; gap: 8px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Billing settings</h1>
+    <p class="lede">Take control of your billing journey — it's not just invoices, it's freedom. Seamlessly manage your plan, payment methods, and workspace in one place.</p>
+
+    <section class="card">
+      <h2>Plan</h2>
+      <p>Pro plan, billed monthly. Fast, secure, and reliable invoicing for teams of every size.</p>
+      <button class="primary">Unlock your potential</button>
+    </section>
+
+    <section class="card">
+      <h2>Billing email</h2>
+      <p>Whether you're a freelancer or an enterprise, this is where invoices are sent.</p>
+      <label for="email">Email</label>
+      <input id="email" type="text" value="billing@lumen.test" />
+      <div class="error">Invalid input.</div>
+    </section>
+
+    <section class="card">
+      <h2>Payment methods</h2>
+      <p>Cards and bank accounts used to pay for your subscription.</p>
+      <div class="empty">No data</div>
+    </section>
+
+    <section class="card danger">
+      <h2>Delete workspace</h2>
+      <p>Permanently remove the workspace and every invoice, client, and payment record inside it.</p>
+      <button class="ghost">Delete workspace</button>
+      <div class="confirm">
+        <h3>Confirm</h3>
+        <p>Are you sure? This action cannot be undone.</p>
+        <div class="confirm-actions">
+          <button class="ghost">Cancel</button>
+          <button class="danger-solid">Yes</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
